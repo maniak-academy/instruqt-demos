@@ -28,8 +28,8 @@ module "sharedservices" {
   location            = var.location
   owner               = var.owner
   mgmt_subnet   = module.azure-network.mgmt_subnet
-  aws_subnet     = module.aws-network.public_subnet
-  vpc_id = module.aws-network.vpc_id
+  # aws_subnet     = module.aws-network.public_subnet
+  # vpc_id = module.aws-network.vpc_id
   depends_on = [
     azurerm_resource_group.consulnetworkautomation
   ]

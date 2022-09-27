@@ -45,10 +45,10 @@ output "f-azure-pan-username" {
   value = var.username
 }
 
-output "g-pan-aws-mgmt-public" {
-  description = "Map of public IPs created within the module."
-  value       = { for k, v in module.awsvmseries : k => v.public_ips }
-}
+# output "g-pan-aws-mgmt-public" {
+#   description = "Map of public IPs created within the module."
+#   value       = { for k, v in module.awsvmseries : k => v.public_ips }
+# }
 # output "username" {
 #   value = "globaladmin"
 # }

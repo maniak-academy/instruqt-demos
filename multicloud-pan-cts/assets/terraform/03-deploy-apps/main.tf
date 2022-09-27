@@ -39,21 +39,21 @@ module "app-azure" {
   app_count = var.app_count
 }
 
-module "api-aws" {
-  source = "./api-aws"
-  aws_subnet     = data.terraform_remote_state.environment.outputs.aws-public-subnet
-  owner = data.terraform_remote_state.environment.outputs.owner
-  consul_server_ip       = data.terraform_remote_state.environment.outputs.aws_consul_private_ip
-  vpc_id = data.terraform_remote_state.environment.outputs.vpc_id
-  aws_api_count = var.aws_api_count
-}
+# module "api-aws" {
+#   source = "./api-aws"
+#   aws_subnet     = data.terraform_remote_state.environment.outputs.aws-public-subnet
+#   owner = data.terraform_remote_state.environment.outputs.owner
+#   consul_server_ip       = data.terraform_remote_state.environment.outputs.aws_consul_private_ip
+#   vpc_id = data.terraform_remote_state.environment.outputs.vpc_id
+#   aws_api_count = var.aws_api_count
+# }
 
-module "app-aws" {
-  source = "./app-aws"
-  aws_subnet     = data.terraform_remote_state.environment.outputs.aws-public-subnet
-  owner = data.terraform_remote_state.environment.outputs.owner
-  consul_server_ip       = data.terraform_remote_state.environment.outputs.aws_consul_private_ip
-  vpc_id = data.terraform_remote_state.environment.outputs.vpc_id
-  aws_app_count = var.aws_app_count
-}
+# module "app-aws" {
+#   source = "./app-aws"
+#   aws_subnet     = data.terraform_remote_state.environment.outputs.aws-public-subnet
+#   owner = data.terraform_remote_state.environment.outputs.owner
+#   consul_server_ip       = data.terraform_remote_state.environment.outputs.aws_consul_private_ip
+#   vpc_id = data.terraform_remote_state.environment.outputs.vpc_id
+#   aws_app_count = var.aws_app_count
+# }
 

@@ -28,6 +28,15 @@ challenges:
   notes:
   - type: text
     contents: |
+      Setting up your environment...
+      
+      Your Azure account will be ready in ~5 minutes. <br>
+
+      Keep an eye on the bottom right corner to know when you can get started.
+      
+
+  - type: text
+    contents: |
       Setting up your environment... Your Azure account will be ready in ~5 minutes.
       Keep an eye on the bottom right corner to know when you can get started.
   assignment: |-
@@ -96,7 +105,7 @@ challenges:
   - title: Terraform Code
     type: code
     hostname: workstation
-    path: /root/terraform/
+    path: /root/terraform/00-panorama-config
   - title: Shell
     type: terminal
     hostname: workstation
