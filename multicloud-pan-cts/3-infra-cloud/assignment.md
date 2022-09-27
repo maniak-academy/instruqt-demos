@@ -1,9 +1,9 @@
 ---
-slug: panorama-config
+slug: infra-cloud
 
 type: challenge
-title: Panorama Config
-teaser: Day 0 Infrastructure as Code using Terraform
+title: Infra Cloud
+teaser: Infra Cloud
 notes:
 - type: text
   contents: |

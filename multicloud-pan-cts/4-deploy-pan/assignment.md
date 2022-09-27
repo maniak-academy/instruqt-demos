@@ -1,9 +1,9 @@
 ---
-slug: panorama-config
+slug: deploy-pan
 
 type: challenge
-title: Panorama Config
-teaser: Day 0 Infrastructure as Code using Terraform
+title: deploy-pan
+teaser: deploy-pan
 notes:
 - type: text
   contents: |

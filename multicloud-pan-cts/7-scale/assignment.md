@@ -1,9 +1,9 @@
 ---
-slug: panorama-config
+slug: scale-apps
 
 type: challenge
-title: Panorama Config
-teaser: Day 0 Infrastructure as Code using Terraform
+title: scale-apps
+teaser: scale-apps
 notes:
 - type: text
   contents: |

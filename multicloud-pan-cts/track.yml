@@ -1,6 +1,6 @@
 slug: multicloud-network-infrastructure-automation
-id: ecy8ogqggaqy
-version: 0.0.2
+
+version: 0.0.3
 title: Palo Alto Firewall Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
 teaser: Palo Alto Networks Next Generation Firewalls and Consul-Terraform-Sync Workshop
@@ -20,91 +20,4 @@ developers:
 private: true
 published: true
 show_timer: true
-challenges:
-- slug: 2-deploy-infrastructure
-  id: 543tm3du2mmk
-  type: challenge
-  title: Day-0 Deploy the Infrastructure
-  notes:
-  - type: text
-    contents: |
-      Setting up your environment... Your Azure account will be ready in ~5 minutes.
-      Keep an eye on the bottom right corner to know when you can get started.
-  assignment: |-
-    In this assignment you will start by installing Terraform
-
-    In the `Shell` tab, execute the following command to install Terraform:
-
-    ```
-    apt-get install terraform
-    ```
-
-    The "Terraform Code" tab contains all of the Infrastructure as Code (IaC) templates used by Terraform to build the Infrastructure. Feel free to look over the code!
-
-    In the `Shell` tab, deploy the Azure Infrastructure by running the following commands:
-
-    ```
-    terraform init
-    terraform plan
-    terraform apply -auto-approve
-    ```
-
-    The following will be deployed:
-
-    * Azure VNets/Subnets/Routing
-    * Palo Alto Firewall in it's own VNET
-    * Vault - Secrets Management
-    * Consul - Service Registry and Discovery (Source of truth)
-    * Bastion Server
-    * Logging Server
-
-    This is part of our Day 0 deployment in an Infrastructure as Code World.
-
-    NOTE: Palo Alto takes about 6+ mins to deploy in azure
-
-    To get specific outputs, In the `Shell` tab, execute the following commands:
-
-    Consul IP
-
-    ```
-    terraform output consul_lb
-    ```
-
-    Vault Management IP
-
-    ```
-    terraform output vault_lb
-    ```
-
-    Vault Management IP
-
-    ```
-    terraform output vault_lb
-    ```
-
-    Palo Alto Management IP
-
-    ```
-    terraform output https_paloalto_mgmt_ip
-    ```
-
-    Continue to configuring the PAN Firewall
-  tabs:
-  - title: Current Lab Setup
-    type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/hashicorp/field-workshops-consul/pan-azure-nia/instruqt-tracks/pan-azure-network-infrastructure-automation/assets/images/mainimage.html
-  - title: Terraform Code
-    type: code
-    hostname: workstation
-    path: /root/terraform/
-  - title: Shell
-    type: terminal
-    hostname: workstation
-  - title: Cloud Consoles
-    type: service
-    hostname: workstation
-    path: /
-    port: 80
-  difficulty: basic
-  timelimit: 600
-checksum: "13368822676742905495"
+skipping_enabled: false
