@@ -45,7 +45,7 @@ fi
 #get assets
 echo "cloning assets..."
 git clone https://github.com/maniak-academy/instruqt-demos.git
-cp -r instruqt-demos/vault-f5-cert-rotation/assets/terraform /root/terraform
+cp -r instruqt-demos/multicloud-pan-cts/assets/terraform /root/terraform
 rm -rf instruqt-demos
 
 #ssh agent
@@ -61,7 +61,7 @@ az account set --subscription "${INSTRUQT_AZURE_SUBSCRIPTION_CONSUL_SUBSCRIPTION
 
 #enable marketplace
 az provider register --namespace 'Microsoft.Solutions' --subscription "${INSTRUQT_AZURE_SUBSCRIPTION_CONSUL_SUBSCRIPTION_ID}"
-#az vm image terms accept --urn paloaltonetworks:vmseries-flex:bundle1:latest
+az vm image terms accept --urn paloaltonetworks:vmseries-flex:bundle1:latest
 
 #optimistic provisioning
 echo "starting optimistic provisioning..."

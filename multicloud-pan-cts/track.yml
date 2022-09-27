@@ -1,13 +1,13 @@
 slug: multicloud-network-infrastructure-automation
-
-version: 0.0.1
-type: track
-title: Palo Alto Firewall Network Infrastructure Automation with Consul-Terraform-Sync Workshop
+id: ecy8ogqggaqy
+version: 0.0.2
+title: Palo Alto Firewall Network Infrastructure Automation with Consul-Terraform-Sync
+  Workshop
 teaser: Palo Alto Networks Next Generation Firewalls and Consul-Terraform-Sync Workshop
 description: In this workshop you'll learn how to automate the provisioning and management
-  of traditional network infrastructure using Terraform, Vault Consul, and Consul Terraform
-  Sync. Eliminate exposure to operational overhead and security risk while accelerating
-  the deployment and scaling of applications and services.
+  of traditional network infrastructure using Terraform, Vault Consul, and Consul
+  Terraform Sync. Eliminate exposure to operational overhead and security risk while
+  accelerating the deployment and scaling of applications and services.
 icon: https://raw.githubusercontent.com/hashicorp/field-workshops-consul/pan-azure-nia/instruqt-tracks/network-infrastructure-automation/assets/images/mainimage.png
 tags:
 - consul
@@ -20,13 +20,11 @@ developers:
 private: true
 published: true
 show_timer: true
-skipping_enabled: false
 challenges:
 - slug: 2-deploy-infrastructure
-
+  id: 543tm3du2mmk
   type: challenge
   title: Day-0 Deploy the Infrastructure
-  teaser: 
   notes:
   - type: text
     contents: |
@@ -39,10 +37,10 @@ challenges:
 
     ```
     apt-get install terraform
-    ``` 
-    
+    ```
+
     The "Terraform Code" tab contains all of the Infrastructure as Code (IaC) templates used by Terraform to build the Infrastructure. Feel free to look over the code!
-    
+
     In the `Shell` tab, deploy the Azure Infrastructure by running the following commands:
 
     ```
@@ -51,8 +49,8 @@ challenges:
     terraform apply -auto-approve
     ```
 
-    The following will be deployed: 
-  
+    The following will be deployed:
+
     * Azure VNets/Subnets/Routing
     * Palo Alto Firewall in it's own VNET
     * Vault - Secrets Management
@@ -71,7 +69,7 @@ challenges:
     ```
     terraform output consul_lb
     ```
-    
+
     Vault Management IP
 
     ```
@@ -85,14 +83,12 @@ challenges:
     ```
 
     Palo Alto Management IP
-    
+
     ```
     terraform output https_paloalto_mgmt_ip
     ```
 
     Continue to configuring the PAN Firewall
-
-
   tabs:
   - title: Current Lab Setup
     type: website
@@ -111,3 +107,4 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 600
+checksum: "13368822676742905495"
