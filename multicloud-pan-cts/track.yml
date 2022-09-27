@@ -1,5 +1,5 @@
 slug: multicloud-network-infrastructure-automation
-
+id: ecy8ogqggaqy
 version: 0.0.3
 title: Palo Alto Firewall Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
@@ -20,4 +20,4 @@ developers:
 private: true
 published: true
 show_timer: true
-skipping_enabled: false
+checksum: "9650789628825801798"

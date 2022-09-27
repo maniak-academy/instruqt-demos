@@ -1,9 +1,9 @@
 ---
-slug: scale-apps
+slug: network-automation
 
 type: challenge
-title: scale-apps
-teaser: scale-apps
+title: deploy-apps
+teaser: deploy-apps
 notes:
 - type: text
   contents: |

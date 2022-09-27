@@ -1,9 +1,9 @@
 ---
-slug: deploy-apps
+slug: scale
 
 type: challenge
-title: deploy-apps
-teaser: deploy-apps
+title: scale-apps
+teaser: scale-apps
 notes:
 - type: text
   contents: |
