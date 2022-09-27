@@ -1,5 +1,5 @@
 ---
-slug: overview
+slug: 01-overview
 
 type: challenge
 title: Overview
