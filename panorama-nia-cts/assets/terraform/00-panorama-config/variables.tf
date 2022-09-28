@@ -7,13 +7,11 @@ variable "panorama_ip" {
 variable "panorama_username" {
   description = "Panorama username"
   type        = string
-  default     = "terraformadmin"
 }
 
 variable "panorama_password" {
   description = "Panorama password"
   type        = string
-  default     = "W3lcome098!"
 
 }
 

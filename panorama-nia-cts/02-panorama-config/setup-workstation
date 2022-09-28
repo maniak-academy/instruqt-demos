@@ -1,6 +1,6 @@
 #!/bin/bash
 
 #assignment
-set-workdir /root/terraform/01-deploy-infra
+set-workdir /root/terraform/00-panorama-config
 
 exit 0

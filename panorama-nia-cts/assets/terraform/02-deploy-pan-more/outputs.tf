@@ -58,6 +58,9 @@
 # #   value = "W3lcome098!"
 # # }
 
+output "panorama_ip" {
+  value = "https://https://20.118.98.21"
+}
 
 output "mgmt_ip_addresses" {
   description = "IP Addresses for VM-Series management (https or ssh)."
