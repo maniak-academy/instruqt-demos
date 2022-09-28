@@ -1,6 +1,6 @@
 slug: multicloud-network-infrastructure-automation
 id: hbktnx0p0jdd
-version: 0.0.4
+version: 0.0.5
 title: Panorama Palo Alto Firewall Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
 teaser: Panorama Palo Alto Networks Next Generation Firewalls and Consul-Terraform-Sync
@@ -115,4 +115,4 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
-checksum: "16725209947758434747"
+checksum: "17433299353130274244"
