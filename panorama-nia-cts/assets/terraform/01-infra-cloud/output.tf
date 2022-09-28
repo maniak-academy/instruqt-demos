@@ -82,3 +82,9 @@ output "db-id" {
 output "azure-consul-public-url" {
   value = "http://${module.sharedservices.azure_consul_public_url}"
 }
+output "panorama-username" {
+  value = var.owner
+}
+output "panorama-password" {
+  value = "W3lcome098!"
+}

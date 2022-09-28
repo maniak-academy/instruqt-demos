@@ -15,3 +15,9 @@ output "panorama-ip" {
 output "cts_ip" {
   value = "ssh -i cts.pem azureuser@${azurerm_public_ip.cts.ip_address}"
 }  
+output "panorama-username" {
+  value = var.owner
+}
+output "panorama-password" {
+  value = "W3lcome098!"
+}
