@@ -1,4 +1,5 @@
 slug: panorama-nia-cts
+id: tvtthxn0ymer
 version: 0.0.12
 title: Panorama MGMT PAN FW Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
@@ -334,4 +335,4 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
-checksum: "16087893724221728242"
+checksum: "14602489073341155459"

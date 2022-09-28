@@ -56,9 +56,6 @@ output "f-azure-pan-username" {
 #   value = "W3lcome098!"
 # }
 
-output "panorama-username" {
-  value = var.owner
-}
 output "panorama-password" {
   value = "W3lcome098!"
 }

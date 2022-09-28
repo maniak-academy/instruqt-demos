@@ -28,9 +28,6 @@ output "pan-azure-mgmt-public" {
 #   value = data.terraform_remote_state.fw.outputs.g-pan-aws-mgmt-public
 # }
 
-output "panorama-username" {
-  value = var.owner
-}
 output "panorama-password" {
   value = "W3lcome098!"
 }
