@@ -20,6 +20,8 @@
 
 
 
+
+
 # output "a-Vault-Credentials" {
 #   value = "To log into vault the token/password = root"
 # }
@@ -55,3 +57,9 @@
 # # output "password" {
 # #   value = "W3lcome098!"
 # # }
+
+
+output "mgmt_ip_addresses" {
+  description = "IP Addresses for VM-Series management (https or ssh)."
+  value       = { for k, v in module.common_vmseries : k => v.mgmt_ip_address }
+}

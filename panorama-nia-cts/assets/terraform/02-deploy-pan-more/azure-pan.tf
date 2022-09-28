@@ -116,7 +116,7 @@ module "common_vmseries" {
 
   location                = data.terraform_remote_state.environment.outputs.location
   resource_group_name     = data.terraform_remote_state.environment.outputs.azurerm_resource_group
-  name                = "${var.name_prefix}${each.key}"
+  name                = "${var.name_prefix}${each.key}-${random_id.pansuffix.hex}"
   avzone              = try(each.value.avzone, 1)
   username            = var.username
   password            = coalesce(var.password, random_password.this.result)

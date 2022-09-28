@@ -15,12 +15,6 @@ module "azure-network" {
   ]
 }
 
-module "aws-network" {
-  source              = "./aws-network"
-  location            = var.location
-  owner               = var.owner
-}
-
 
 module "sharedservices" {
   source              = "./sharedservices"

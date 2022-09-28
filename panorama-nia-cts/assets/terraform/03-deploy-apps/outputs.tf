@@ -21,9 +21,9 @@ output "panorama_ip" {
   value = "https://20.118.98.21"
 }
 
-# output "pan-azure-mgmt-public" {
-#   value = data.terraform_remote_state.fw.outputs.e-pan-azure-mgmt-public
-#  }
+output "pan-azure-mgmt-public" {
+  value = data.terraform_remote_state.fw.outputs.mgmt_ip_addresses
+ }
 # output "pan-aws-mgmt-public" {
 #   value = data.terraform_remote_state.fw.outputs.g-pan-aws-mgmt-public
 # }

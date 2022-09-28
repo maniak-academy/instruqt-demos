@@ -21,7 +21,7 @@ route_tables = {
       default = {
         address_prefix         = "0.0.0.0/0"
         next_hop_type          = "VirtualAppliance"
-        next_hop_in_ip_address = "10.110.0.21"
+        next_hop_in_ip_address = "10.110.0.1"
       }
     }
   }
