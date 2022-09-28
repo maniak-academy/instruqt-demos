@@ -45,7 +45,7 @@ fi
 #get assets
 echo "cloning assets..."
 git clone https://github.com/maniak-academy/instruqt-demos.git
-cp -r instruqt-demos/multicloud-pan-cts/assets/terraform /root/terraform
+cp -r instruqt-demos/panorama-nia-cts/assets/terraform /root/terraform
 rm -rf instruqt-demos
 
 #ssh agent
