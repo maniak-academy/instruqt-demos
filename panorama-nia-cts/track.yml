@@ -1,5 +1,5 @@
 slug: panorama-nia-cts
-
+id: qy7hznc6pp3z
 version: 0.0.8
 title: Panorama MGMT PAN FW Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
@@ -23,6 +23,7 @@ published: true
 show_timer: true
 challenges:
 - slug: 01-overview
+  id: ybccdrguppbx
   type: challenge
   title: Let's explore
   notes:
@@ -46,7 +47,7 @@ challenges:
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/blob/main/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -59,7 +60,7 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 01-infra-cloud
-
+  id: dxcmto90cg5c
   type: challenge
   title: Let's Start building..
   notes:
@@ -124,7 +125,7 @@ challenges:
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/blob/main/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -140,6 +141,7 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 02-deploy-pan
+  id: kvnahkqpcd3r
   type: challenge
   title: Deploy out Security Palo Alto Hub
   notes:
@@ -182,7 +184,7 @@ challenges:
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/blob/main/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -198,6 +200,7 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 03-deploy-apps
+  id: sx6jl3i4ujsj
   type: challenge
   title: Deploy Applications
   notes:
@@ -231,7 +234,7 @@ challenges:
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/blob/main/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -247,6 +250,7 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 04-azure-network-automation
+  id: 310ge6rusmnh
   type: challenge
   title: Deploy and Enable CTS
   notes:
@@ -267,14 +271,14 @@ challenges:
     terraform apply -auto-approve
     ```
 
-    In the same shell log into the CTS server with the output that was provided. 
-    
+    In the same shell log into the CTS server with the output that was provided.
+
     ```
     ssh -i cts.pem azureuser@$<ip from your output>
     ````
 
     Once you've SSH'd into the machine execute the following code to see logs/changes occur as we increase and decrease the environment...
-    
+
     ```
     sudo journalctl -u consul-tf-sync -f
     ````
@@ -287,7 +291,7 @@ challenges:
 
     Jump into `Terraform Code 2' to increase some web and app count from 2 to 3. MAKE SURE to Save the config
 
-    
+
     ```
     variable "web_count" {
         default = "3"
@@ -296,24 +300,20 @@ challenges:
         default = "3"
     }
     ```
-  
+
     After you've saved the configuration, just into 'Shell 2' apply the terraform code
 
     ```
     cd /root/terraform/03-deploy-apps
-    terraform apply 
+    terraform apply
     ```
 
 
-    Play around in the environment we have built for you. 
-
-
-
-
+    Play around in the environment we have built for you.
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/blob/main/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -335,3 +335,4 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
+checksum: "449299576553811585"
