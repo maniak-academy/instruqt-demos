@@ -1,7 +1,7 @@
-slug: multicloud-network-infrastructure-automation
-id: hbktnx0p0jdd
-version: 0.0.5
-title: Panorama Palo Alto Firewall Network Infrastructure Automation with Consul-Terraform-Sync
+slug: panorama-nia-cts
+
+version: 0.0.6
+title: Panorama MGMT PAN FW Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
 teaser: Panorama Palo Alto Networks Next Generation Firewalls and Consul-Terraform-Sync
   Workshop
@@ -104,8 +104,11 @@ challenges:
   - title: Terraform Code
     type: code
     hostname: workstation
-    path: /root/terraform/00-panorama-config
+    path: /root/terraform/01-infra-cloud
   - title: Shell
+    type: terminal
+    hostname: workstation
+  - title: Shell2
     type: terminal
     hostname: workstation
   - title: Cloud Consoles
