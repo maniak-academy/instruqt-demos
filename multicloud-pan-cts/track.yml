@@ -1,9 +1,10 @@
 slug: multicloud-network-infrastructure-automation
-id: ecy8ogqggaqy
+id: hbktnx0p0jdd
 version: 0.0.4
-title: Palo Alto Firewall Network Infrastructure Automation with Consul-Terraform-Sync
+title: Panorama Palo Alto Firewall Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
-teaser: Palo Alto Networks Next Generation Firewalls and Consul-Terraform-Sync Workshop
+teaser: Panorama Palo Alto Networks Next Generation Firewalls and Consul-Terraform-Sync
+  Workshop
 description: In this workshop you'll learn how to automate the provisioning and management
   of traditional network infrastructure using Terraform, Vault Consul, and Consul
   Terraform Sync. Eliminate exposure to operational overhead and security risk while
@@ -22,7 +23,7 @@ published: true
 show_timer: true
 challenges:
 - slug: 01-overview
-  id: pvqxy5ybjkbw
+  id: fj9wr0ltcfld
   type: challenge
   title: Day-0 Deploy the Infrastructure
   notes:
@@ -113,5 +114,5 @@ challenges:
     path: /
     port: 80
   difficulty: basic
-  timelimit: 600
-checksum: "3737539207339192713"
+  timelimit: 6000
+checksum: "2891038186916989494"
