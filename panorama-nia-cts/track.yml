@@ -1,6 +1,6 @@
 slug: panorama-nia-cts
-id: 0woqkru4zfbm
-version: 0.0.6
+id: jlpswgj9eouu
+version: 0.0.7
 title: Panorama MGMT PAN FW Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
 teaser: Panorama Palo Alto Networks Next Generation Firewalls and Consul-Terraform-Sync
@@ -23,7 +23,7 @@ published: true
 show_timer: true
 challenges:
 - slug: 01-overview
-  id: qrliajmumwwl
+  id: idzaqpwxdygf
   type: challenge
   title: Let's explore
   notes:
@@ -37,16 +37,13 @@ challenges:
   - type: text
     contents: |
       The first thing we will start is to explore how PANORAMA was deployed <br>
-
   assignment: |-
-    Let's explore the terraform code. 
+    Let's explore the terraform code.
 
-    Click on the Terraform Code, and take a look how we build 
+    Click on the Terraform Code, and take a look how we build
     - Dyanmic Address Groups
     - Network Address Translations (NATs)
     - Security Policies
-
-   
   tabs:
   - title: Lab Overview
     type: website
@@ -62,9 +59,8 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
-
 - slug: 01-infra-cloud
-
+  id: ggx9gl68h0cx
   type: challenge
   title: Let's Start building..
   notes:
@@ -77,9 +73,7 @@ challenges:
        - Hashicorp consul <br>
        - Logging Server <br>
        - Bastion Server <br>
-      
-      
-  assignment: |-  
+  assignment: |-
     In this assignment you will start by installing Terraform
 
     In the Shell tab, execute the following command to install Terraform:
@@ -97,7 +91,7 @@ challenges:
     ```
 
     Make sure to save the configuration (click on the save button)
-  
+
     In the 'Shell' tab, deploy the Azure Infrastructure by running the following commands:
 
     ```
@@ -122,12 +116,11 @@ challenges:
     ```
     terraform output consullb
     ```
-    
+
     VAULT URL [the token = root ]
     ```
     terraform output vaultlb
     ```
-   
   tabs:
   - title: Lab Overview
     type: website
@@ -146,25 +139,23 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
-
 - slug: 02-deploy-pan
-
+  id: iezrvyqvvkka
   type: challenge
   title: Deploy out Security Palo Alto Hub
   notes:
   - type: text
-    contents: |
+    contents: |+
       The next challange we will start by building out our Security Zone/HUB that will deploy our PAN OS firewalls.  <br>
 
-      
-      Process: When we hit the terraform apply 
+
+      Process: When we hit the terraform apply
        1. Network/VNETS/Load Balancers/IPs will be deployed
        2. PANOS will be bootstrapped from the Panorama
 
       Note: The entire process takes about 10-12 min
-         
-      
-  assignment: |-  
+
+  assignment: |-
     Let's deploy the PAN OS in our infrastructure
 
 
@@ -176,16 +167,13 @@ challenges:
     terraform apply -auto-approve
     ```
 
-    NOTE: To deploy the PANS it takes about 10 mintues. 
+    NOTE: To deploy the PANS it takes about 10 mintues.
 
     While, your waiting.. log into the Panorama https://20.118.98.21/
 
     When you log into the panorama click on 'PANORAMA > Managed Devices > Summary' your device will start to register and go through the process.
 
     When you see the status as "Connected" with a "commit sucessed" you can move onto deploying the apps.
-
-
-   
   tabs:
   - title: Lab Overview
     type: website
@@ -204,23 +192,20 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
-
-
 - slug: 03-deploy-apps
-
+  id: 8jsk9n4axyfz
   type: challenge
   title: Deploy Applications
   notes:
   - type: text
-    contents: |
+    contents: |+
       The next challange we will start to deploy our applications
-      
-      Each service/app deployed will automtically register to Consul and 
+
+      Each service/app deployed will automtically register to Consul and
 
       Note: The entire process takes about 3-5min
-         
-      
-  assignment: |-  
+
+  assignment: |-
     Let's deploy some apps
 
     NOTE: Make sure the panos have been booted and are "connected" within panorama
@@ -233,13 +218,11 @@ challenges:
     terraform apply -auto-approve
     ```
 
-    NOTE: To deploy the PANS it takes about 5 mintues. 
+    NOTE: To deploy the PANS it takes about 5 mintues.
 
-    Let's explore the configuration.. here is an 
+    Let's explore the configuration.. here is an
 
     While your waiting, you can log into the CONSUL Server to verify the applications are being registered.
-
-   
   tabs:
   - title: Lab Overview
     type: website
@@ -258,20 +241,17 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
-
-
 - slug: 04-azure-network-automation
-
+  id: 1wilhfy27pyj
   type: challenge
   title: Deploy and Enable CTS
   notes:
   - type: text
     contents: |
       The next challange we will deploy Consul Terraform Sync.
-            
+
       Once CTS starts it will register it self with consul and kick of the desired tasks.
-      
-  assignment: |-  
+  assignment: |-
     Let's build and deploy CTS in our environment
 
     In the 'Shell' tab, execute the following command to install Terraform:
@@ -282,13 +262,11 @@ challenges:
     terraform apply -auto-approve
     ```
 
-    Now let's log into CTS to see whats happening, 
+    Now let's log into CTS to see whats happening,
 
-    Let's explore the configuration.. here is an 
+    Let's explore the configuration.. here is an
 
     While your waiting, you can log into the CONSUL Server to verify the applications are being registered.
-
-   
   tabs:
   - title: Lab Overview
     type: website
@@ -307,3 +285,4 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
+checksum: "558949217560495560"
