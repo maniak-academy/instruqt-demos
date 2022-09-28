@@ -1,6 +1,6 @@
 slug: panorama-nia-cts
-id: jlpswgj9eouu
-version: 0.0.7
+
+version: 0.0.8
 title: Panorama MGMT PAN FW Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
 teaser: Panorama Palo Alto Networks Next Generation Firewalls and Consul-Terraform-Sync
@@ -23,7 +23,6 @@ published: true
 show_timer: true
 challenges:
 - slug: 01-overview
-  id: idzaqpwxdygf
   type: challenge
   title: Let's explore
   notes:
@@ -47,7 +46,7 @@ challenges:
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/hashicorp/field-workshops-consul/pan-azure-nia/instruqt-tracks/pan-azure-network-infrastructure-automation/assets/images/mainimage.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -60,13 +59,13 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 01-infra-cloud
-  id: ggx9gl68h0cx
+
   type: challenge
   title: Let's Start building..
   notes:
   - type: text
     contents: |
-      The next challange we will start by building out the Shared Infrastructure <br>
+      The next challange we be will building out the Shared Infrastructure <br>
 
       Build <br>
        - Hashicorp Vault <br>
@@ -95,6 +94,7 @@ challenges:
     In the 'Shell' tab, deploy the Azure Infrastructure by running the following commands:
 
     ```
+    cd terraform/01-infra-cloud/
     terraform init
     terraform plan
     terraform apply -auto-approve
@@ -108,7 +108,7 @@ challenges:
       Bastion Server
       Logging Server
 
-    With Consul being our Service Regisry and source of truth, we need to make sure that VAULT has successfuly beeing deployed.
+    With Consul being our Service Regisry and source of truth, we need to make sure that VAULT has successfuly been deployed.
 
     To get specific outputs, In the Shell tab, execute the following commands:
 
@@ -124,7 +124,7 @@ challenges:
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/hashicorp/field-workshops-consul/pan-azure-nia/instruqt-tracks/pan-azure-network-infrastructure-automation/assets/images/mainimage.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -140,7 +140,6 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 02-deploy-pan
-  id: iezrvyqvvkka
   type: challenge
   title: Deploy out Security Palo Alto Hub
   notes:
@@ -159,7 +158,13 @@ challenges:
     Let's deploy the PAN OS in our infrastructure
 
 
-    In the 'Shell' tab, execute the following command to install Terraform:
+    In the 'Shell' tab, jump into the directory
+
+    ```
+    cd terraform/02-deploy-pan
+    ```
+
+    than, execute the following command to install Terraform:
 
     ```
     terraform init
@@ -177,11 +182,11 @@ challenges:
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/hashicorp/field-workshops-consul/pan-azure-nia/instruqt-tracks/pan-azure-network-infrastructure-automation/assets/images/mainimage.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
-    path: /root/terraform/01-deploy-pan
+    path: /root/terraform/02-deploy-pan
   - title: Shell
     type: terminal
     hostname: workstation
@@ -193,7 +198,6 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 03-deploy-apps
-  id: 8jsk9n4axyfz
   type: challenge
   title: Deploy Applications
   notes:
@@ -213,6 +217,7 @@ challenges:
     In the 'Shell' tab, execute the following command to install Terraform:
 
     ```
+    cd terraform/03-deploy-apps
     terraform init
     terraform plan
     terraform apply -auto-approve
@@ -226,7 +231,7 @@ challenges:
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/hashicorp/field-workshops-consul/pan-azure-nia/instruqt-tracks/pan-azure-network-infrastructure-automation/assets/images/mainimage.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -242,7 +247,6 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 04-azure-network-automation
-  id: 1wilhfy27pyj
   type: challenge
   title: Deploy and Enable CTS
   notes:
@@ -257,25 +261,71 @@ challenges:
     In the 'Shell' tab, execute the following command to install Terraform:
 
     ```
+    cd terraform/04-azure-network-automation/
     terraform init
     terraform plan
     terraform apply -auto-approve
     ```
 
-    Now let's log into CTS to see whats happening,
+    In the same shell log into the CTS server with the output that was provided. 
+    
+    ```
+    ssh -i cts.pem azureuser@$<ip from your output>
+    ````
 
-    Let's explore the configuration.. here is an
+    Once you've SSH'd into the machine execute the following code to see logs/changes occur as we increase and decrease the environment...
+    
+    ```
+    sudo journalctl -u consul-tf-sync -f
+    ````
 
-    While your waiting, you can log into the CONSUL Server to verify the applications are being registered.
+    Log into the PANORAMA / or your PAN-OS Device and valiadte that there are registered servers in Dynamic Object list on the PAN OS. NOTE you will need to go to Dashbaord > and under Panaorama select your device.
+
+
+    Next the challange is to increase the web and app count so you can see that happens in your CTS server and Panorama
+
+
+    Jump into `Terraform Code 2' to increase some web and app count from 2 to 3. MAKE SURE to Save the config
+
+    
+    ```
+    variable "web_count" {
+        default = "3"
+    }
+    variable "app_count" {
+        default = "3"
+    }
+    ```
+  
+    After you've saved the configuration, just into 'Shell 2' apply the terraform code
+
+    ```
+    cd /root/terraform/03-deploy-apps
+    terraform apply 
+    ```
+
+
+    Play around in the environment we have built for you. 
+
+
+
+
   tabs:
   - title: Lab Overview
     type: website
-    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/hashicorp/field-workshops-consul/pan-azure-nia/instruqt-tracks/pan-azure-network-infrastructure-automation/assets/images/mainimage.html
+    url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/panorama-nia-cts/assets/images/env.html
   - title: Terraform Code
     type: code
     hostname: workstation
     path: /root/terraform/04-azure-network-automation
+  - title: Terraform Code 2
+    type: code
+    hostname: workstation
+    path: /root/terraform/03-deploy-apps
   - title: Shell
+    type: terminal
+    hostname: workstation
+  - title: Shell 2
     type: terminal
     hostname: workstation
   - title: Cloud Consoles
@@ -285,4 +335,3 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
-checksum: "558949217560495560"
