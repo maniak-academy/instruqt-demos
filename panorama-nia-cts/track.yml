@@ -1,6 +1,6 @@
 slug: panorama-nia-cts
-id: qy7hznc6pp3z
-version: 0.0.8
+id: g0cwekedpi1h
+version: 0.0.9
 title: Panorama MGMT PAN FW Network Infrastructure Automation with Consul-Terraform-Sync
   Workshop
 teaser: Panorama Palo Alto Networks Next Generation Firewalls and Consul-Terraform-Sync
@@ -23,7 +23,7 @@ published: true
 show_timer: true
 challenges:
 - slug: 01-overview
-  id: ybccdrguppbx
+  id: lvywb0cmxnyu
   type: challenge
   title: Let's explore
   notes:
@@ -60,7 +60,7 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 01-infra-cloud
-  id: dxcmto90cg5c
+  id: ccfr7shr13sa
   type: challenge
   title: Let's Start building..
   notes:
@@ -84,10 +84,10 @@ challenges:
 
     The "Terraform Code" tab contains all of the Infrastructure as Code (IaC) templates used by Terraform to build the Infrastructure. Feel free to look over the code!
 
-    Go to the 'Terraform Code' File explore and edit the 'terraform.tfvars' and put the username that was emailed to you.
+    Go to the 'Terraform Code' File explore and edit the 'terraform.tfvars' and put the group name that will be assigned to you.
 
     ```
-    owner = "replaceme"
+    owner = "group#"
     ```
 
     Make sure to save the configuration (click on the save button)
@@ -126,6 +126,9 @@ challenges:
   - title: Lab Overview
     type: website
     url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/blob/main/panorama-nia-cts/assets/images/env.html
+  - title: Panaorama
+    type: website
+    url: https://20.118.98.21/
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -141,7 +144,7 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 02-deploy-pan
-  id: kvnahkqpcd3r
+  id: qvdw8r6mzvrp
   type: challenge
   title: Deploy out Security Palo Alto Hub
   notes:
@@ -185,6 +188,9 @@ challenges:
   - title: Lab Overview
     type: website
     url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/blob/main/panorama-nia-cts/assets/images/env.html
+  - title: Panaorama
+    type: website
+    url: https://20.118.98.21/
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -200,7 +206,7 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 03-deploy-apps
-  id: sx6jl3i4ujsj
+  id: zyjhjy9gltju
   type: challenge
   title: Deploy Applications
   notes:
@@ -235,6 +241,9 @@ challenges:
   - title: Lab Overview
     type: website
     url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/blob/main/panorama-nia-cts/assets/images/env.html
+  - title: Panaorama
+    type: website
+    url: https://20.118.98.21/
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -250,7 +259,7 @@ challenges:
   difficulty: basic
   timelimit: 6000
 - slug: 04-azure-network-automation
-  id: 310ge6rusmnh
+  id: 7yvsojwh2hmf
   type: challenge
   title: Deploy and Enable CTS
   notes:
@@ -314,6 +323,9 @@ challenges:
   - title: Lab Overview
     type: website
     url: https://htmlpreview.github.io/?https://raw.githubusercontent.com/maniak-academy/instruqt-demos/blob/main/panorama-nia-cts/assets/images/env.html
+  - title: Panaorama
+    type: website
+    url: https://20.118.98.21/
   - title: Terraform Code
     type: code
     hostname: workstation
@@ -335,4 +347,4 @@ challenges:
     port: 80
   difficulty: basic
   timelimit: 6000
-checksum: "449299576553811585"
+checksum: "12256984421016449894"
